@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Tambah Siswa</title>
+    <title>Tambah Kendaraan</title>
   </head>
 
   <body>
@@ -14,10 +14,10 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header">
-              TAMBAH SISWA
+              ABSEN
             </div>
             <div class="card-body">
-              <form action="<?php echo base_url() ?>index.php/siswa/simpan" method="POST">
+              <form action="<?php echo base_url() ?>index.php/siswa/simpan" method="POST" enctype="multipart/form-data">
                 
                 <div class="form-group">
                   <label>NISN</label>
@@ -30,9 +30,24 @@
                 </div>
 
                 <div class="form-group">
-                  <label>Alamat</label>
-                  <textarea class="form-control" name="alamat" placeholder="Masukkan Alamat Siswa" rows="4"></textarea>
+                  <label>Jabatan</label>
+                  <select name="jabatan" id="jabatan">
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Front End">Front End</option>
+                    <option value="Back End">Back End</option>
+                  </select>
                 </div>
+
+                <div class="form-group">
+                  <label>Jabatan</label>
+                  <select name="keterangan" id="jabatan">
+                    <option value="Hadir">Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                  </select>
+                </div>
+
+
                 
                 <button type="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" class="btn btn-warning">RESET</button>

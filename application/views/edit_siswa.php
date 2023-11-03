@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Edit Siswa</title>
+    <title>ABSEN SISWA</title>
   </head>
 
   <body>
@@ -14,7 +14,7 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header">
-              EDIT SISWA
+              ABSEN SISWA
             </div>
             <div class="card-body">
               <form action="<?php echo base_url() ?>index.php/siswa/update" method="POST">
@@ -22,7 +22,7 @@
                 <div class="form-group">
                   <label>NISN</label>
                   <input type="text" name="nisn" value="<?php echo $data_siswa->nisn ?>" placeholder="Masukkan NISN Siswa" class="form-control">
-                  <input type="hidden" name="id_siswa" value="<?php echo $data_siswa->id_siswa ?>">
+                  <input type="hidden" name="id" value="<?php echo $data_siswa->id ?>">
                 </div>
 
                 <div class="form-group">
@@ -31,9 +31,27 @@
                 </div>
 
                 <div class="form-group">
-                  <label>Alamat</label>
-                  <textarea class="form-control" name="alamat" placeholder="Masukkan Alamat Siswa" rows="4"><?php echo $data_siswa->alamat ?></textarea>
+                  <label>Jabatan</label>
+                  <select name="jabatan" id="jabatan">
+                    
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Front End">Front End</option>
+                    <option value="Back End">Back End</option>
+                  </select>
                 </div>
+
+                <div class="form-group">
+                  <label>Jabatan</label>
+                  <select name="keterangan" id="jabatan">
+                
+                    <option value="Hadir">Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                  </select>
+                </div>
+
+
+                
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
